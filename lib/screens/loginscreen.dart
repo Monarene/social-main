@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_social_ui/screens/HomeScreen.dart';
 import 'package:flutter_social_ui/widgets/curve_clipper.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -71,7 +72,10 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 40,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
+              },
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 60),
                 alignment: Alignment.center,
