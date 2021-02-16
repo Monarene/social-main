@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_social_ui/data/data.dart';
 import 'package:flutter_social_ui/widgets/custom_drawer.dart';
 import 'package:flutter_social_ui/widgets/following_users.dart';
+import 'package:flutter_social_ui/widgets/post_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -54,6 +56,11 @@ class _HomeScreenState extends State<HomeScreen>
       body: ListView(
         children: [
           FollowingUsers(),
+          PostsCarousel(
+            pageController: _pageController,
+            title: "Posts",
+            posts: posts,
+          )
         ],
       ),
     );
